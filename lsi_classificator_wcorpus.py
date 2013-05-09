@@ -9,10 +9,10 @@ from meliae import scanner
 scanner.dump_all_objects('filename.json')
 
 
-foa = open("d1", "r")
-fof = open("d2", "r")
-fom = open("d3", "r")
-fot = open("d4", "r")
+foa = open("doc_corpus_AFMT1000/d1", "r")
+fof = open("doc_corpus_AFMT1000/d2", "r")
+fom = open("doc_corpus_AFMT1000/d3", "r")
+fot = open("doc_corpus_AFMT1000/d4", "r")
 
 txt=[]
 stt=""

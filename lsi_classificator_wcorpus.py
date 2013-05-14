@@ -5,8 +5,6 @@ from pprint import pprint
 import numpy as np
 import scipy
 import sys
-from meliae import scanner
-scanner.dump_all_objects('filename.json')
 
 
 foa = open("doc_corpus_AFMT1000/d1", "r")

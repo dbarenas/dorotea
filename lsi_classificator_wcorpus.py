@@ -92,4 +92,3 @@ print "d1: ",1-scipy.spatial.distance.cosine(U[0][:2], qqr[0][:2])
 print "d2: ",1-scipy.spatial.distance.cosine(U[1][:2], qqr[0][:2])
 print "d3: ",1-scipy.spatial.distance.cosine(U[2][:2], qqr[0][:2])
 print "d4: ",1-scipy.spatial.distance.cosine(U[3][:2], qqr[0][:2])
-

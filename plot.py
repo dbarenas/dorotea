@@ -63,7 +63,7 @@ annotate(r'$q$',
          arrowprops=dict(arrowstyle="->", connectionstyle="arc3,rad=.5"))
  
 grid(True)
-savefig('plot_data.png')
+savefig('image_plot_data.png')
 
 plt.show()
 exit

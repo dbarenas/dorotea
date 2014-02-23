@@ -6,7 +6,6 @@ import numpy as np
 
 Q=np.matrix([[1, 2], [3, 4]])
 
-
-
 I=Q.dot(Q.getI())
+print "-----"
 print I

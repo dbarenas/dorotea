@@ -16,7 +16,6 @@ print X
 print ";*;"*50
 analyze = vectorizer.build_analyzer()
 
-
 print mean
 print "*"*20
 print vectorizer.get_feature_names()

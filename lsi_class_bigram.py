@@ -7,6 +7,7 @@ from pprint import pprint
 import numpy as np
 import scipy
 import json
+
 from datetime import datetime
 
 tstart = datetime.now()
@@ -46,11 +47,13 @@ for i in f.readlines():
 mean = dataset
 tend = datetime.now()
 
+
 # mean= ['Shipment of gold damage in and fire'
 #        ,'Delivery of silver arrived in and silver truck'
 #        ,'Shipment of gold arrived in and truck'
 #        ]
 vectorizer = CountVectorizer(min_df=0,stop_words=SPANISH_STOPWORDS,ngram_range=(2,3))
+
 X = vectorizer.fit_transform(mean)
 # print ";*;"*50
 # print X
@@ -63,7 +66,9 @@ analyze = vectorizer.build_analyzer()
 matrix = X.toarray()
 # print matrix
 
+<<<<<<< HEAD
 q=vectorizer.transform([u'En dos oficios, la Corte Suprema de Justicia indagó a las secretarías de Senado y Cámara por algunos datos de doce congresistas de diferentes partidos políticos. En un primer escrito, firmado por Nancy Calderón Perilla, “profesional universitaria”, y que llegó a la Secretaría de Senado, el alto tribunal indaga por dos puntos: los “integrantes de las comisiones (…) tercera y sexta durante los periodos 2010-2014 y 2014-2018”. El segundo punto ronda sobre si siete senadores y exsenadores “fueron autores o promovieron debates de control político durante los dos periodos antes mencionados”. Los congresistas por los que se indaga son Bernardo Miguel Elías Vidal, Musa Besaile Fayad y y José David Name, de ‘la U’; Roberto Gerleín Echavarría, del Partido Conservador; Iván Duque Márquez, del Centro Democrático, y Arleth Casado de López, del Partido Liberal. También se indaga por el exsenador del Partido Liberal y actual ministro del Interior, Juan Fernando Cristo Bustos. Por los lados de la Cámara llegó un oficio igual con los nombres de Alfredo Ape Cuello Baute, José Alfredo Gnecco Zuleta y Manuel Guillermo Mora Jaramillo, de ‘la U’; Alejandro Carlos Chacón Camargo, del Partido Liberal, y Ciro Alejandro Ramírez Cortés, del Centro Democrático. Aunque en sus escritos la Corte Suprema no especifica por qué la indagación sobre estos congresistas y excongresistas, algunos de ellos han sido mencionados en diferentes instancias en medio del escándalo de sobornos de la compañía brasilera Odebrecht. Usualmente, el primer paso del alto tribunal para abrir investigaciones sobre los congresistas es que el Congreso les notifique su calidad de aforados, algo que no aparece en ninguna parte de estos dos escritos. Sin embargo, el alto tribunal indica que la información solicitada tiene como propósito obrar “en las diligencias que se adelantan en esta corporación”. Se espera que en los próximos días las secretarías de Senado y Cámara envíen la información solicitada por la Corte Suprema de Justicia. POLÍTICA']) 
+
 # print "q *"*20
 qtr= zip(*q)
 qt = np.matrix(qtr)
@@ -73,6 +78,7 @@ M,N = matrix.shape
 U,s,Vh = linalg.svd(matrix)
 Sig = linalg.diagsvd(s,M,N)
 #U, Vh = U, Vh
+
 # print "u."*20
 # print U # -> is Vh
 # print "S."*20

@@ -33,7 +33,7 @@ stt=""
 
 mean=txt
 #mean= ['Shipment of gold damage in and fire','Delivery of silver arrived in and silver truck','Shipment of gold arrived in and truck']
-
+# SPANISH_STOPWORDS = frozenset
 vectorizer = CountVectorizer(min_df=0,stop_words=None)
 X = vectorizer.fit_transform(mean)
 analyze = vectorizer.build_analyzer()
